@@ -1,30 +1,31 @@
 
 import React from "react";
+import { Link } from "react-router-dom";
 
 const quickLinks = [
-    { name: "Home", url: "/" },
-    { name: "About Us", url: "/about" },
-    { name: "Our Products", url: "/products" },
-    { name: "Gallery", url: "/gallery" },
-    { name: "Contact Us", url: "/contact" },
+    { name: "Home", url: "#" },
+    { name: "About Us", id: "#about" },
+    { name: "Our Products", id: "#products" },
+    { name: "Faqs", id: "#faq" },
+    { name: "Contact Us", id: "#" },
 ];
 
 const productLinks = [
-    { name: "LED Headlights", url: "/products" },
-    { name: "Fog Lights", url: "/products" },
-    { name: "Tail Lights", url: "/products" },
-    { name: "Indicator Lights", url: "/products" },
-    { name: "Automotive Accessories", url: "/products" },
+    { name: "LED Headlights", id: "#products" },
+    { name: "Fog Lights", id: "#products" },
+    { name: "Tail Lights", id: "products" },
+    { name: "Indicator Lights", id: "#products" },
+    { name: "Automotive Accessories", id: "#products" },
 ];
 
 const Footer = () => {
     return (
         <footer className="site-footer">
-            <div className="container">
+            <div className="container-lg">
                 <div className="row gy-5">
 
                     {/* COLUMN 1 - COMPANY */}
-                    <div className="col-lg-3 col-md-6 border-end border-dark">
+                    <div className="col-lg-3 col-sm-6 border-end border-dark">
                         <div className="footer-about">
                             <a href="/" className="footer-logo">
                                 <img
@@ -41,33 +42,31 @@ const Footer = () => {
                             </p>
 
                             <div className="footer-social">
-                                <a href="https://facebook.com" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+                                <a href="https://www.facebook.com/people/Superlex/61551375550117/" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
                                     <i className="fa-brands fa-facebook-f"></i>
                                 </a>
 
-                                <a href="https://instagram.com" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                                <a href="https://www.instagram.com/superlexautolight" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
                                     <i className="fa-brands fa-instagram"></i>
                                 </a>
 
-                                <a href="https://youtube.com" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
+                                <a href="https://www.youtube.com/@SuperlexAutoLights" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
                                     <i className="fa-brands fa-youtube"></i>
                                 </a>
 
-                                <a href="https://x.com" aria-label="X" target="_blank" rel="noopener noreferrer">
-                                    <i className="fa-brands fa-x-twitter"></i>
-                                </a>
+                               
                             </div>
                         </div>
                     </div>
 
                     {/* COLUMN 2 - QUICK LINKS */}
-                    <div className="col-lg-3 col-md-6">
+                    <div className="col-lg-3 col-sm-6">
                         <h4 className="footer-title">Quick Links</h4>
 
                         <ul className="footer-links">
                             {quickLinks.map((item, index) => (
                                 <li key={index}>
-                                    <a href={item.url}>
+                                    <a href={item.id}>
                                         <i className="fa-solid fa-angle-right"></i>
                                         {item.name}
                                     </a>
@@ -76,14 +75,14 @@ const Footer = () => {
                         </ul>
                     </div>
 
-                    {/* COLUMN 3 - PRODUCTS */}
-                    <div className="col-lg-3 col-md-6">
+
+                    <div className="col-lg-3 col-sm-6">
                         <h4 className="footer-title">Our Products</h4>
 
                         <ul className="footer-links">
                             {productLinks.map((item, index) => (
                                 <li key={index}>
-                                    <a href={item.url}>
+                                    <a href={item.id}>
                                         <i className="fa-solid fa-angle-right"></i>
                                         {item.name}
                                     </a>
@@ -93,7 +92,7 @@ const Footer = () => {
                     </div>
 
                     {/* COLUMN 4 - MAP */}
-                    <div className="col-lg-3 col-md-6">
+                    <div className="col-lg-3 col-sm-6">
                         <h4 className="footer-title">Our Location</h4>
 
                         <div className="footer-map">
@@ -115,43 +114,49 @@ const Footer = () => {
                         <div className="footer-contact">
                             <div className="row gy-4">
 
-                                <div className="col-lg-4 col-md-6">
+                                <div className="col-lg-4 col-msm-6">
                                     <div className="footer-contact-item">
                                         <div className="footer-contact-icon">
                                             <i className="fa-solid fa-phone-volume"></i>
                                         </div>
                                         <div>
                                             <h5>Phone</h5>
-                                            <a href="tel:+9189XXXXXXXX">
-                                                +91 89XXXXXXXX
+                                            <a href="tel:+919654475016">
+                                                +91 96544 75016
                                             </a>
                                         </div>
                                     </div>
                                 </div>
 
-                                <div className="col-lg-4 col-md-6">
+                                <div className="col-lg-4 col-msm-6">
+                                    <div className="footer-contact-item">
+                                        <div className="footer-contact-icon">
+                                            <i className="fa-solid fa-envelope"></i>
+                                        </div>
+                                        <div>
+                                            <h5>Email</h5>
+                                            <a href="mailto:superlexautolight@gmail.com">
+                                                superlexautolight@gmail.com
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className="col-lg-4 col-msm-6">
                                     <div className="footer-contact-item">
                                         <div className="footer-contact-icon">
                                             <i className="fa-solid fa-location-dot"></i>
                                         </div>
                                         <div>
                                             <h5>Address</h5>
-                                            <p>New Delhi 110086, India</p>
+                                            <p>Dharma Enterprises
+                                                superlexautolight@gmail.com
+                                                J-213, Sector 2, Bawana Industrial Area, New Delhi – 110039, </p>
                                         </div>
                                     </div>
                                 </div>
 
-                                <div className="col-lg-4 col-md-12">
-                                    <div className="footer-contact-item">
-                                        <div className="footer-contact-icon">
-                                            <i className="fa-regular fa-clock"></i>
-                                        </div>
-                                        <div>
-                                            <h5>Opening Hours</h5>
-                                            <p>Monday till Friday 10 to 6 EST</p>
-                                        </div>
-                                    </div>
-                                </div>
+                               
 
                             </div>
                         </div>

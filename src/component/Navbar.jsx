@@ -97,7 +97,7 @@ const Navbar = () => {
                     {/* RIGHT SIDE */}
                     <div className="nav-right">
 
-                        <a href="#contact" className="contact-btn">
+                        <a href="#" className="contact-btn">
                             <span>Contact Us</span>
                             <i className="fa-solid fa-arrow-right"></i>
                         </a>
