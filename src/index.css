@@ -619,12 +619,12 @@ a {
 }
 
 .promo-dark {
-  background: url('img/promo1.png');
+  background: url('/img/promo1.png');
   background-size: cover;
 }
 
 .promo-red {
-    background: url('img/promo2.png');
+    background: url('/img/promo2.png');
       background-size: cover;
 
 }
