@@ -43,44 +43,39 @@ const ContactUs = () => {
         }));
     };
 
+
     const handleSubmit = async (e) => {
         e.preventDefault();
 
         if (loading || formData.website.trim()) return;
 
-        if (!CONTACT.email) {
-            setStatus({
-                type: "danger",
-                message:
-                    "Please configure the official Superlex enquiry email.",
-            });
-            return;
-        }
-
         setLoading(true);
         setStatus({ type: "", message: "" });
 
         try {
+            const data = new FormData();
+
+            data.append("name", formData.name.trim());
+            data.append("email", formData.email.trim());
+            data.append("phone", formData.phone.trim());
+            data.append("enquiry_type", formData.enquiryType);
+            data.append("message", formData.message.trim());
+
+            data.append(
+                "_subject",
+                `Superlex Website Enquiry - ${formData.enquiryType}`
+            );
+            data.append("_template", "table");
+            data.append("_captcha", "false");
+
             const response = await fetch(
-                `https://formsubmit.co/ajax/${encodeURIComponent(
-                    CONTACT.email
-                )}`,
+                `https://formsubmit.co/ajax/${CONTACT.email}`,
                 {
                     method: "POST",
                     headers: {
-                        "Content-Type": "application/json",
                         Accept: "application/json",
                     },
-                    body: JSON.stringify({
-                        name: formData.name.trim(),
-                        email: formData.email.trim(),
-                        phone: formData.phone.trim(),
-                        enquiry_type: formData.enquiryType,
-                        message: formData.message.trim(),
-                        _subject: `Superlex Website Enquiry - ${formData.enquiryType}`,
-                        _template: "table",
-                        _replyto: formData.email.trim(),
-                    }),
+                    body: data,
                 }
             );
 
@@ -92,29 +87,28 @@ const ContactUs = () => {
                     result.success !== "true")
             ) {
                 throw new Error(
-                    result.message || "Unable to submit your enquiry."
+                    result.message || "Form submission failed."
                 );
             }
 
             setStatus({
                 type: "success",
-                message:
-                    "Thank you for contacting Superlex! Your enquiry has been submitted successfully.",
+                message: "Your enquiry has been sent successfully!",
             });
 
             setFormData(initialForm);
         } catch (error) {
+            console.error("Superlex Form Error:", error);
+
             setStatus({
                 type: "danger",
-                message:
-                    error instanceof TypeError
-                        ? "Network error. Please try again."
-                        : error.message || "Something went wrong.",
+                message: error.message || "Unable to submit your enquiry.",
             });
         } finally {
             setLoading(false);
         }
     };
+
 
     return (
         <>
