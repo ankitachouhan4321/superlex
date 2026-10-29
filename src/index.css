@@ -12,10 +12,12 @@
   --secondary-color: #101010;
   --dark-color: #191919;
   --white-color: #ffffff;
-
   --yellow:#ffe32b;
 }
 
+button{
+border: none !important;
+}
 
 body {
   margin: 0;
@@ -911,7 +913,7 @@ a {
 }
 
 .footer-contact-item a:hover {
-  color: var(--primary-color, #c51c30);
+  color: white;
 }
 
 /* COPYRIGHT */
@@ -2418,3 +2420,333 @@ a {
 
 
 /* testimonial end */
+
+/* breadcrumb start */
+
+.superlex-breadcrumb {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: var(--white-color);
+}
+
+.superlex-breadcrumb-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+/* Title */
+.superlex-breadcrumb-title {
+  position: static;
+  transform: none;
+  order: 1;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--white-color);
+}
+
+/* Breadcrumb Navigation */
+.superlex-breadcrumb-nav {
+  position: static;
+  order: 2;
+}
+
+.superlex-breadcrumb-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+}
+
+.superlex-breadcrumb-list a {
+  color: var(--white-color);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.superlex-breadcrumb-list a:hover,
+.superlex-breadcrumb-current {
+  color: var(--primary-color);
+}
+
+.superlex-breadcrumb-arrow {
+  color: var(--white-color);
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .superlex-breadcrumb {
+    height: 170px;
+  }
+
+  .superlex-breadcrumb-title {
+    font-size: 28px;
+  }
+
+  .superlex-breadcrumb-list {
+    font-size: 12px;
+    gap: 8px;
+  }
+}
+
+
+/* breadcrumb end */
+
+
+
+
+.superlex-contact-section {
+  padding: 80px 0;
+  background: #f8f9fb;
+}
+
+/* CONTACT INFO CARDS */
+
+.superlex-info-row {
+  margin-bottom: 65px;
+}
+
+.superlex-info-card {
+  background: var(--white-color);
+  border: 1px solid #e7e9ed;
+  border-bottom: 3px solid #e7e9ed;
+  border-radius: 10px;
+  min-height: 225px;
+  padding: 30px 22px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s ease;
+}
+
+.superlex-info-card:hover {
+  transform: translateY(-5px);
+  border-bottom-color: var(--primary-color);
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.09);
+}
+
+.superlex-info-icon {
+  height: 55px;
+  width: 55px;
+  border-radius: 50%;
+  background: rgba(197, 28, 48, 0.08);
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  font-size: 21px;
+}
+
+.superlex-info-card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--secondary-color);
+  margin-bottom: 16px;
+}
+
+.superlex-info-card a {
+  color: var(--dark-color);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.8;
+  overflow-wrap: anywhere;
+  transition: 0.3s;
+}
+
+.superlex-info-card a:hover {
+  color: var(--primary-color);
+}
+
+.superlex-info-card p {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #555;
+  margin: 0;
+}
+
+/* CONTACT FORM WRAPPER */
+
+.superlex-contact-wrapper {
+  background: var(--white-color);
+  border: 1px solid #e7e9ed;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.04);
+}
+
+.superlex-form-content {
+  padding: 8px 10px 8px 0;
+}
+
+
+.superlex-form-description {
+  margin-bottom: 25px;
+}
+
+/* FORM FIELDS */
+
+.superlex-form-control {
+  display: block;
+  width: 100%;
+  min-height: 49px;
+  background: #fff !important;
+  border: 1px solid #dce0e5;
+  border-radius: 6px;
+  padding: 12px 14px;
+  color: var(--secondary-color);
+  font-size: 14px;
+  font-family: inherit;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+.superlex-form-control::placeholder {
+  color: #89909b;
+}
+
+.superlex-form-control:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(197, 28, 48, 0.10);
+}
+
+textarea.superlex-form-control {
+  min-height: 140px;
+  resize: vertical;
+}
+
+select.superlex-form-control {
+  cursor: pointer;
+}
+
+/* SUBMIT BUTTON */
+
+
+.superlex-submit-btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* RIGHT SIDE IMAGE */
+
+.superlex-contact-image {
+  position: relative;
+  height: 100%;
+  min-height: 400px;
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--secondary-color);
+}
+
+.superlex-contact-image img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.superlex-contact-image:hover img {
+  transform: scale(1.04);
+}
+
+.superlex-contact-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.95),
+    rgba(0, 0, 0, 0.05) 65%
+  );
+}
+
+.superlex-image-overlay {
+  position: absolute;
+  z-index: 2;
+  bottom: 25px;
+  left: 25px;
+  right: 25px;
+  color: var(--white-color);
+}
+
+.superlex-image-overlay span {
+  color: var(--yellow);
+  letter-spacing: 2px;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.superlex-image-overlay h3 {
+  color: var(--white-color);
+  font-size: 23px;
+  font-weight: 700;
+  margin: 10px 0;
+}
+
+.superlex-image-overlay p {
+  color: #eee;
+  font-size: 13px;
+  margin: 0;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 991px) {
+  .superlex-contact-section {
+    padding: 60px 0;
+  }
+
+  .superlex-info-row {
+    margin-bottom: 40px;
+  }
+
+  .superlex-contact-image {
+    min-height: 350px;
+  }
+}
+
+@media (max-width: 767px) {
+  .superlex-contact-section {
+    padding: 45px 0;
+  }
+
+  .superlex-info-card {
+    min-height: auto;
+    padding: 25px 20px;
+  }
+
+  .superlex-contact-wrapper {
+    padding: 20px;
+  }
+
+   .superlex-contact-image {
+    min-height: 300px;
+  }
+
+}
+
+/* contact end */

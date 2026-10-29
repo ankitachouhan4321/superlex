@@ -255,12 +255,21 @@ const processSteps = [
     },
 ];
 
+const Practice = [
+    1, 2, 3, 4
+]
+
 
 
 const Home = () => {
 
     return (
         <>
+        <div>
+               
+        </div>
+
+
             {/* hero-banner start */}
 
             <section className="hero-banner" id="hero-banner1">
@@ -441,7 +450,7 @@ const Home = () => {
                     <div className="row align-items-center g-5">
 
                         {/* LEFT CONTENT */}
-                        <div className="col-lg-7">
+                        <div className="col-lg-7" data-aos="fade-right">
                             <div className="product-section-heading">
 
                                 <span className="section-subtitle">

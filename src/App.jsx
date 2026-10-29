@@ -15,13 +15,21 @@ import "aos/dist/aos.css";
 const App = () => {
   useEffect(() => {
     AOS.init({
-      duration: 800,
+      duration: 1000,
       easing: "ease-in-out",
       once: true,
-      offset: 80,
-      disable: () =>
-        window.matchMedia("(prefers-reduced-motion: reduce)").matches,
+      offset: 50,
+      mirror: false,
     });
+
+    // Refresh positions after images load
+    const refreshAOS = () => AOS.refreshHard();
+
+    window.addEventListener("load", refreshAOS);
+
+    return () => {
+      window.removeEventListener("load", refreshAOS);
+    };
   }, []);
   
   return (

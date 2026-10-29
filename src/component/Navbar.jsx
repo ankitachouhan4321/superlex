@@ -1,5 +1,6 @@
 
 import React, { useState } from "react";
+import { Link } from 'react-router-dom'
 
 const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -9,7 +10,7 @@ const Navbar = () => {
         { name: "About Us", link: "#about" },
         { name: "Products", link: "#products" },
         { name: "Gallery", link: "#gallery" },
-        { name: "Contact Us", link: "#contact" },
+        { name: "Contact Us", link: "/contact" },
     ];
 
     const closeMenu = () => setMenuOpen(false);
@@ -83,13 +84,13 @@ const Navbar = () => {
                     <ul className={`nav-links ${menuOpen ? "show-menu" : ""}`}>
                         {navLinks.map((item, index) => (
                             <li key={index}>
-                                <a
-                                    href={item.link}
+                                <Link
+                                    to={item.link}
                                     className={index === 0 ? "active" : ""}
                                     onClick={closeMenu}
                                 >
                                     {item.name}
-                                </a>
+                                </Link>
                             </li>
                         ))}
                     </ul>
