@@ -10,7 +10,6 @@ import "swiper/css/pagination";
 import FaqSection from '.././component/FaqSection'
 import Testimonials from '.././component/Testimonials'
 
-import ContactForm from '../component/ContactForm';
 
 
 
