@@ -4,7 +4,7 @@ import React, { useState } from "react";
 // Replace these placeholders with official Superlex details.
 const CONTACT = {
     phones: ["+91 96544 75016"],
-    email: "info.viraladsmedia@gmail.com",
+    email: "superlexautolight@gmail.com",
     address: "J-213, Sector 2, Bawana Industrial Area, New Delhi – 110039, ",
     image: "/img/contact-us.jpg",
 };
