@@ -6,6 +6,9 @@ import Home from './pages/Home'
 import About from './pages/About'
 import Contact from './pages/Contact'
 import Products from './pages/Products'
+import Faqs from './pages/Faqs'
+import ScrollToTop from './component/ScrollToTop';
+import FloatingButtons from './component/FloatingButtons';
 
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -34,6 +37,10 @@ const App = () => {
   
   return (
     <>
+      
+        {/* AUTO SCROLL TO TOP ON ROUTE CHANGE */}
+        <ScrollToTop />
+
       <Navbar />
 
 
@@ -41,11 +48,13 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/products" element={<Products />} />
+        <Route path="/our-products" element={<Products />} />
+        <Route path="/faqs" element={<Faqs/>} />
       </Routes>
 
 
       <Footer />
+      <FloatingButtons/>
 
 
 

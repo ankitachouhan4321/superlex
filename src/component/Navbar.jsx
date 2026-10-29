@@ -6,10 +6,10 @@ const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
 
     const navLinks = [
-        { name: "Home", link: "#home" },
-        { name: "About Us", link: "#about" },
-        { name: "Products", link: "#products" },
-        { name: "Gallery", link: "#gallery" },
+        { name: "Home", link: "/" },
+        { name: "About Us", link: "/about" },
+        { name: "Products", link: "/our-products" },
+        { name: "Faqs", link: "/faqs" },
         { name: "Contact Us", link: "/contact" },
     ];
 
@@ -98,10 +98,10 @@ const Navbar = () => {
                     {/* RIGHT SIDE */}
                     <div className="nav-right">
 
-                        <a href="#" className="contact-btn">
+                        <Link to="/contact" className="contact-btn">
                             <span>Contact Us</span>
                             <i className="fa-solid fa-arrow-right"></i>
-                        </a>
+                        </Link>
 
                         {/* MOBILE TOGGLE */}
                         <button

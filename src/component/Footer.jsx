@@ -3,11 +3,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const quickLinks = [
-    { name: "Home", url: "#" },
-    { name: "About Us", id: "#about" },
-    { name: "Our Products", id: "#products" },
-    { name: "Faqs", id: "#faq" },
-    { name: "Contact Us", id: "#" },
+    { name: "Home", url: "/" },
+    { name: "About Us", url: "/about" },
+    { name: "Our Products", url: "/our-products" },
+    { name: "Faqs", url: "/faqs" },
+    { name: "Contact Us", url: "/contact" },
 ];
 
 const productLinks = [
@@ -20,6 +20,7 @@ const productLinks = [
 
 const Footer = () => {
     return (
+        <>
         <footer className="site-footer">
             <div className="container-lg">
                 <div className="row gy-5">
@@ -66,7 +67,7 @@ const Footer = () => {
                         <ul className="footer-links">
                             {quickLinks.map((item, index) => (
                                 <li key={index}>
-                                    <a href={item.id}>
+                                    <a href={item.url}>
                                         <i className="fa-solid fa-angle-right"></i>
                                         {item.name}
                                     </a>
@@ -194,6 +195,8 @@ const Footer = () => {
                 </div>
             </div>
         </footer>
+        
+        </>
     );
 };
 

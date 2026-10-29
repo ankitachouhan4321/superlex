@@ -6,7 +6,7 @@ const CONTACT = {
     phones: ["+91 96544 75016"],
     email: "info.viraladsmedia@gmail.com",
     address: "J-213, Sector 2, Bawana Industrial Area, New Delhi – 110039, ",
-    image: "/img/superlex-contact.jpg",
+    image: "/img/contact-us.jpg",
 };
 
 const enquiryOptions = [
@@ -113,13 +113,13 @@ const ContactUs = () => {
     return (
         <>
         <section className="superlex-contact-section">
-            <div className="container">
+            <div className="container-lg">
 
                 {/* Contact Information Cards */}
                 <div className="row g-4 superlex-info-row">
 
                     {/* Phone Card */}
-                    <div className="col-lg-4 col-md-6">
+                    <div className="col-lg-4 col-sm-6">
                         <div className="superlex-info-card">
                             <div className="superlex-info-icon">
                                 <i className="fa-solid fa-phone"></i>
@@ -143,7 +143,7 @@ const ContactUs = () => {
                     </div>
 
                     {/* Email Card */}
-                    <div className="col-lg-4 col-md-6">
+                    <div className="col-lg-4 col-sm-6">
                         <div className="superlex-info-card">
                             <div className="superlex-info-icon">
                                 <i className="fa-solid fa-envelope"></i>
@@ -162,7 +162,7 @@ const ContactUs = () => {
                     </div>
 
                     {/* Address Card */}
-                    <div className="col-lg-4 col-md-12">
+                    <div className="col-lg-4 col-sm-12">
                         <div className="superlex-info-card">
                             <div className="superlex-info-icon">
                                 <i className="fa-solid fa-location-dot"></i>
@@ -341,15 +341,6 @@ const ContactUs = () => {
                                     loading="lazy"
                                 />
 
-                                <div className="superlex-image-overlay">
-                                    <span>SUPERLEX</span>
-                                    <h3>
-                                        Quality Motorcycle Indicators
-                                    </h3>
-                                    <p>
-                                        Manufacturer | Exporter | Supplier
-                                    </p>
-                                </div>
                             </div>
                         </div>
 

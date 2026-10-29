@@ -1,6 +1,7 @@
 import React from 'react'
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay, Pagination } from "swiper/modules";
+import {Link} from 'react-router-dom';
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -148,13 +149,13 @@ const banners = [
     {
         title: "PREMIUM BIKE INDICATORS",
         subtitle: "BUILT FOR STYLE & RELIABLE PERFORMANCE",
-        link: "/",
+        link: "/our-products",
         theme: "dark",
     },
     {
         title: "QUALITY YOU CAN TRUST",
         subtitle: "MANUFACTURER, EXPORTER & SUPPLIER",
-        link: "/",
+        link: "/our-products",
         theme: "red",
     },
 ];
@@ -162,35 +163,32 @@ const banners = [
 const products = [
     {
         id: 1,
-        name: "LED Headlights",
-        image: "/img/prod.png",
+        part:"NI-1114",
+        name: "Glamour New Model F.I (Universal)",
+        image: "/img/prod/1.jpg",
+        image2: "/img/prod/1.1.jpg",
     },
     {
         id: 2,
-        name: "Fog Lights",
-        image: "/img/prod.png",
+        part: "NI-1101A",
+        name: "Blinker Assy Splendor Plus (Universal)",
+        image: "/img/prod/2.jpg",
+        image2: "/img/prod/2.1.jpg",
     },
     {
-        id: 3,
-        name: "Tail Lights",
-        image: "/img/prod.png",
+        id: 1,
+        part: "NI-1114",
+        name: "Glamour New Model F.I (Universal)",
+        image: "/img/prod/1.jpg",
+        image2: "/img/prod/1.1.jpg",
     },
     {
-        id: 4,
-        name: "Indicator Lights",
-        image: "/img/prod.png",
+        id: 2,
+        part: "NI-1101A",
+        name: "Blinker Assy Splendor Plus (Universal)",
+        image: "/img/prod/2.jpg",
+        image2: "/img/prod/2.1.jpg",
     },
-    {
-        id: 3,
-        name: "Tail Lights",
-        image: "/img/prod.png",
-    },
-    {
-        id: 4,
-        name: "Indicator Lights",
-        image: "/img/prod.png",
-    }
-
 
 ];
 
@@ -482,10 +480,10 @@ const Home = () => {
                                     markets.
                                 </p>
 
-                                <a href="#" className="contact-btn">
+                                <Link to="/about" className="contact-btn">
                                     Read More
                                     <i className="fa-solid fa-arrow-right"></i>
-                                </a>
+                                </Link>
 
                             </div>
                         </div>
@@ -641,6 +639,7 @@ const Home = () => {
 
             <section className="product-section" id="products">
                 <div className="container-fluid px-3 px-lg-5">
+                    <div class="container">
 
                     {/* SECTION HEADING */}
                     <div className="row align-items-center mb-4">
@@ -709,7 +708,7 @@ const Home = () => {
                                 spaceBetween: 24,
                             },
                             1200: {
-                                slidesPerView: 5,
+                                slidesPerView: 4,
                                 spaceBetween: 24,
                             },
                         }}
@@ -725,17 +724,29 @@ const Home = () => {
                                             src={product.image}
                                             alt={product.name}
                                             loading="lazy"
+                                            className='img1'
                                         />
+                                        <img
+                                            src={product.image2}
+                                            alt={product.name}
+                                            loading="lazy"
+                                            className='img2'
+                                        />
+
                                     </div>
 
                                     {/* PRODUCT CONTENT */}
                                     <div className="product-card-content">
+                                        <h5>{product.part}</h5>
+
                                         <h3>{product.name}</h3>
 
                                         <a
-                                            href={`/contact?product=${encodeURIComponent(
-                                                product.name
+                                            href={`https://wa.me/919654475016?text=${encodeURIComponent(
+                                                `Hello Superlex, I want to enquire about ${product.name}. Please share the price and details.`
                                             )}`}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
                                             className="product-enquiry-btn"
                                         >
                                             Enquiry Now
@@ -747,6 +758,7 @@ const Home = () => {
                             </SwiperSlide>
                         ))}
                     </Swiper>
+                </div>
                 </div>
             </section>
             {/* product-sec end */}
@@ -921,7 +933,6 @@ const Home = () => {
             {/* faq start */}
             <FaqSection />
 
-
             {/* faq end */}
 
             {/* export start */}
@@ -957,13 +968,13 @@ const Home = () => {
                                     partnerships.
                                 </p>
 
-                                <a
-                                    href="/"
+                                <Link
+                                    to="/contact"
                                     className="superlex-export-btn"
                                 >
                                     Enquire for Bulk Supply
                                     <i className="fa-solid fa-arrow-right"></i>
-                                </a>
+                                </Link>
 
                             </div>
 
