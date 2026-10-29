@@ -196,7 +196,7 @@ const ContactUs = () => {
                                         distribution opportunities.</p></div>
 
                                     <form
-                                        action="https://formsubmit.co/info.viraladsmedia@gmail.com"
+                                        action="https://formsubmit.co/superlexautolight@gmail.com"
                                         method="POST"
                                     >
                                         <input
