@@ -10,8 +10,11 @@ import Faqs from './pages/Faqs'
 import ScrollToTop from './component/ScrollToTop';
 import FloatingButtons from './component/FloatingButtons';
 
+
 import AOS from "aos";
 import "aos/dist/aos.css";
+
+
 
 
 
