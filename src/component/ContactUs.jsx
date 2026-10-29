@@ -44,70 +44,70 @@ const ContactUs = () => {
     };
 
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
+    // const handleSubmit = async (e) => {
+    //     e.preventDefault();
 
-        if (loading || formData.website.trim()) return;
+    //     if (loading || formData.website.trim()) return;
 
-        setLoading(true);
-        setStatus({ type: "", message: "" });
+    //     setLoading(true);
+    //     setStatus({ type: "", message: "" });
 
-        try {
-            const data = new FormData();
+    //     try {
+    //         const data = new FormData();
 
-            data.append("name", formData.name.trim());
-            data.append("email", formData.email.trim());
-            data.append("phone", formData.phone.trim());
-            data.append("enquiry_type", formData.enquiryType);
-            data.append("message", formData.message.trim());
+    //         data.append("name", formData.name.trim());
+    //         data.append("email", formData.email.trim());
+    //         data.append("phone", formData.phone.trim());
+    //         data.append("enquiry_type", formData.enquiryType);
+    //         data.append("message", formData.message.trim());
 
-            data.append(
-                "_subject",
-                `Superlex Website Enquiry - ${formData.enquiryType}`
-            );
-            data.append("_template", "table");
-            data.append("_captcha", "false");
+    //         data.append(
+    //             "_subject",
+    //             `Superlex Website Enquiry - ${formData.enquiryType}`
+    //         );
+    //         data.append("_template", "table");
+    //         data.append("_captcha", "false");
 
-            const response = await fetch(
-                `https://formsubmit.co/ajax/${CONTACT.email}`,
-                {
-                    method: "POST",
-                    headers: {
-                        Accept: "application/json",
-                    },
-                    body: data,
-                }
-            );
+    //         const response = await fetch(
+    //             `https://formsubmit.co/ajax/${CONTACT.email}`,
+    //             {
+    //                 method: "POST",
+    //                 headers: {
+    //                     Accept: "application/json",
+    //                 },
+    //                 body: data,
+    //             }
+    //         );
 
-            const result = await response.json();
+    //         const result = await response.json();
 
-            if (
-                !response.ok ||
-                (result.success !== true &&
-                    result.success !== "true")
-            ) {
-                throw new Error(
-                    result.message || "Form submission failed."
-                );
-            }
+    //         if (
+    //             !response.ok ||
+    //             (result.success !== true &&
+    //                 result.success !== "true")
+    //         ) {
+    //             throw new Error(
+    //                 result.message || "Form submission failed."
+    //             );
+    //         }
 
-            setStatus({
-                type: "success",
-                message: "Your enquiry has been sent successfully!",
-            });
+    //         setStatus({
+    //             type: "success",
+    //             message: "Your enquiry has been sent successfully!",
+    //         });
 
-            setFormData(initialForm);
-        } catch (error) {
-            console.error("Superlex Form Error:", error);
+    //         setFormData(initialForm);
+    //     } catch (error) {
+    //         console.error("Superlex Form Error:", error);
 
-            setStatus({
-                type: "danger",
-                message: error.message || "Unable to submit your enquiry.",
-            });
-        } finally {
-            setLoading(false);
-        }
-    };
+    //         setStatus({
+    //             type: "danger",
+    //             message: error.message || "Unable to submit your enquiry.",
+    //         });
+    //     } finally {
+    //         setLoading(false);
+    //     }
+    // };
 
 
     return (
@@ -195,7 +195,21 @@ const ContactUs = () => {
                                         bulk orders, export requirements and
                                         distribution opportunities.</p></div>
 
-                                <form onSubmit={handleSubmit}>
+                                    <form
+                                        action="https://formsubmit.co/info.viraladsmedia@gmail.com"
+                                        method="POST"
+                                    >
+                                        <input
+                                            type="hidden"
+                                            name="_subject"
+                                            value="New Superlex Website Enquiry"
+                                        />
+
+                                        <input
+                                            type="hidden"
+                                            name="_template"
+                                            value="table"
+                                        />
 
                                     {/* Honeypot Spam Protection */}
                                     <input
@@ -307,19 +321,10 @@ const ContactUs = () => {
                                         )}
 
                                         <div className="col-12">
-                                            <button
-                                                type="submit"
-                                                className="contact-btn "
-                                                disabled={loading}
-                                            >
-                                                {loading
-                                                    ? "Sending..."
-                                                    : "Send Enquiry"}
-
-                                                {!loading && (
+                                                <button type="submit" className="contact-btn">
+                                                    Send Enquiry
                                                     <i className="fa-solid fa-arrow-right"></i>
-                                                )}
-                                            </button>
+                                                </button>
                                         </div>
 
                                     </div>
