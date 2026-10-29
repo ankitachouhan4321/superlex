@@ -990,7 +990,7 @@ const Home = () => {
 
             <Testimonials/>
 
-            <ContactForm/>
+            
 
         </>
     )
