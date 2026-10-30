@@ -11,11 +11,11 @@ const quickLinks = [
 ];
 
 const productLinks = [
-    { name: "LED Headlights", id: "#products" },
-    { name: "Fog Lights", id: "#products" },
-    { name: "Tail Lights", id: "products" },
-    { name: "Indicator Lights", id: "#products" },
-    { name: "Automotive Accessories", id: "#products" },
+    { name: "Blinker Assy Splendor Plus (L+R)", id: "/our-products" },
+    { name: "Blinker Assy Splendor Pro (L+R)", id: "/our-products" },
+    { name: "Blinker Assy Splendor Plus Universal", id: "products" },
+    { name: "Blinker Assy Passion Plus Universal", id: "/our-products" },
+    { name: "Blinker Assy Passion X-Pro", id: "/our-products" },
 ];
 
 const Footer = () => {
@@ -78,7 +78,7 @@ const Footer = () => {
 
 
                     <div className="col-lg-3 col-sm-6">
-                        <h4 className="footer-title">Our Products</h4>
+                        <h4 className="footer-title">Our Best Products</h4>
 
                         <ul className="footer-links">
                             {productLinks.map((item, index) => (

@@ -164,31 +164,18 @@ const banners = [
 const products = [
     {
         id: 1,
-        part:"NI-1114",
-        name: "Glamour New Model F.I (Universal)",
-        image: "/img/prod/1.jpg",
-        image2: "/img/prod/1.1.jpg",
+        part: "NI-1101B",
+        name: "Blinker Assy Splendor Pro Universal",
+        image: "img/prod/4.jpg",
+        image2: "img/prod/4.1.jpg",
     },
+
     {
         id: 2,
-        part: "NI-1101A",
-        name: "Blinker Assy Splendor Plus (Universal)",
-        image: "/img/prod/2.jpg",
-        image2: "/img/prod/2.1.jpg",
-    },
-    {
-        id: 1,
         part: "NI-1114",
-        name: "Glamour New Model F.I (Universal)",
-        image: "/img/prod/1.jpg",
-        image2: "/img/prod/1.1.jpg",
-    },
-    {
-        id: 2,
-        part: "NI-1101A",
-        name: "Blinker Assy Splendor Plus (Universal)",
-        image: "/img/prod/2.jpg",
-        image2: "/img/prod/2.1.jpg",
+        name: "Blinker Assy Glamour New Model F.I (Universal)",
+        image: "img/prod/16.jpg",
+        image2: "img/prod/16.1.jpg",
     },
 
 ];
@@ -254,10 +241,78 @@ const processSteps = [
     },
 ];
 
-const Practice = [
-    1, 2, 3, 4
-]
 
+const sections = [
+    {
+        title: "Our Lab",
+        image: "/img/lab.png",
+        alt: "Superlex Motorcycle Indicator Quality Testing Lab",
+        points: [
+            {
+                title: "Indicator Quality Testing",
+                text: "Quality checks focused on motorcycle indicator lighting, visibility, and reliable performance.",
+            },
+            {
+                title: "Lens & Light Inspection",
+                text: "Careful inspection of indicator lenses, light output, and overall product finishing.",
+            },
+            {
+                title: "Durability & Performance",
+                text: "Evaluation of motorcycle indicator components for durability and dependable everyday use.",
+            },
+            {
+                title: "Quality Assurance",
+                text: "Attention to product quality and consistency to meet the needs of automotive spare parts markets.",
+            },
+        ],
+    },
+    {
+        title: "Tool Room",
+        image: "/img/tool.png",
+        alt: "Superlex Motorcycle Indicator Tooling and Development",
+        points: [
+            {
+                title: "Precision Component Design",
+                text: "Focus on accurate designs for motorcycle indicator housings, lenses, and mounting components.",
+            },
+            {
+                title: "Bike Model Compatibility",
+                text: "Development of indicator assemblies suitable for various Hero and Bajaj motorcycle models.",
+            },
+            {
+                title: "Material & Build Quality",
+                text: "Emphasis on durable materials and quality components for long-lasting motorcycle indicators.",
+            },
+            {
+                title: "Accurate Fitting",
+                text: "Attention to mounting dimensions and component design for secure and proper indicator fitting.",
+            },
+        ],
+    },
+    {
+        title: "Automated Production",
+        image: "/img/production.png",
+        alt: "Superlex Motorcycle Indicator Manufacturing and Production",
+        points: [
+            {
+                title: "Motorcycle Indicator Manufacturing",
+                text: "Manufacturing motorcycle indicator assemblies for a wide range of two-wheeler applications.",
+            },
+            {
+                title: "Product Assembly",
+                text: "Focus on accurate assembly of indicator lenses, housings, wiring, and mounting components.",
+            },
+            {
+                title: "Consistent Product Quality",
+                text: "Emphasis on reliable performance, attractive finishing, and consistent product standards.",
+            },
+            {
+                title: "Wholesale & Export Supply",
+                text: "Supplying motorcycle indicators to dealers, distributors, wholesalers, and automotive spare parts businesses.",
+            },
+        ],
+    },
+];
 
 
 const Home = () => {
@@ -449,7 +504,7 @@ const Home = () => {
                     <div className="row align-items-center g-5">
 
                         {/* LEFT CONTENT */}
-                        <div className="col-lg-7" data-aos="fade-right">
+                        <div className="col-lg-6" data-aos="fade-right">
                             <div className="product-section-heading">
 
                                 <span className="section-subtitle">
@@ -490,11 +545,11 @@ const Home = () => {
                         </div>
 
                         {/* RIGHT IMAGE */}
-                        <div className="col-lg-5">
+                        <div className="col-lg-6">
                             <div className="about-image-wrap">
 
                                 <img
-                                    src="/img/about.jpg"
+                                    src="/img/about.png"
                                     alt="Superlex Bike Indicator Manufacturer, Exporter and Supplier"
                                     className="img-fluid about-main-image"
                                     loading="lazy"
@@ -511,7 +566,7 @@ const Home = () => {
                     </div>
 
                     {/* BOTTOM CARDS */}
-                    <div className="row g-4 mt-5">
+                    <div className="row g-4 mt-5 d-none">
                         {aboutCards.map((card, index) => (
                             <div
                                 className="col-lg-4 col-md-6"
@@ -534,10 +589,47 @@ const Home = () => {
                         ))}
                     </div>
 
+                 
+
                 </div>
             </section>
 
             {/* about-sec end */}
+
+            <section className="superlex-manufacturing">
+                <div className="container-lg">
+                    {sections.map((section, index) => (
+                        <div
+                            className={`superlex-manufacturing-row ${index % 2 !== 0 ? "reverse-row" : ""
+                                }`}
+                            key={section.title}
+                        >
+                            <div className="superlex-manufacturing-image">
+                                <img
+                                    src={section.image}
+                                    alt={section.alt}
+                                    loading="lazy"
+                                />
+                            </div>
+
+                            <div className="superlex-manufacturing-content">
+                                <h2 className="superlex-manufacturing-title">
+                                    {section.title}
+                                </h2>
+
+                                <ul className="superlex-manufacturing-list">
+                                    {section.points.map((point) => (
+                                        <li key={point.title}>
+                                            <strong>{point.title}</strong>
+                                            <span>{point.text}</span>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </section>
 
 
             {/* why-choose start */}

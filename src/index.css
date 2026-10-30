@@ -1108,6 +1108,48 @@ a {
 
 }
 
+
+/* PRODUCT SERIES TABS */
+
+.product-series-tabs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 25px 0 30px;
+}
+
+.product-series-btn {
+  background: transparent;
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color) !important;
+  padding: 12px 35px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.product-series-btn:hover,
+.product-series-btn.active {
+  background: #c51c30;
+  color: #ffffff;
+  border-color: #c51c30;
+}
+
+@media (max-width: 576px) {
+  .product-series-tabs {
+    gap: 10px;
+  }
+
+  .product-series-btn {
+    padding: 10px 18px;
+    font-size: 14px;
+  }
+}
+
 /* RESPONSIVE */
 @media (max-width: 767px) {
   .product-section {
@@ -1137,16 +1179,16 @@ a {
 /* ABOUT IMAGE */
 .about-image-wrap {
   position: relative;
-  max-width: 440px;
+  /* max-width: 440px; */
   margin: auto;
-  padding: 12px 12px 25px;
+  padding: 12px 12px 20px;
   border: 2px solid #e2e8f0;
   border-radius: 12px;
 }
 
 .about-main-image {
   width: 100%;
-  height: 365px;
+  /* height: 365px; */
   object-fit: cover;
   border-radius: 10px;
 }
@@ -1230,9 +1272,9 @@ a {
 
 /* RESPONSIVE */
 @media (max-width: 767px) {
-  .about-main-image {
+  /* .about-main-image {
     height: 300px;
-  }
+  } */
 
   .about-experience {
     right: 0;
@@ -1246,6 +1288,15 @@ a {
   .about-info-card {
     padding: 22px;
   }
+}
+@media (max-width:575px) {
+  .about-image-wrap {
+    padding: 0px;
+  }
+  .about-experience{
+    display: none;
+  }
+
 }
 
 /* about-sec end */
@@ -3114,3 +3165,168 @@ select.superlex-form-control {
 
 
 /* Floating Buttons Container end*/
+
+
+.superlex-manufacturing {
+  background: var(--primary-color, #c51c30);
+  padding: 55px 0;
+  overflow: hidden;
+}
+
+.superlex-manufacturing-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 45px;
+  margin-bottom: 45px;
+}
+
+.superlex-manufacturing-row:last-child {
+  margin-bottom: 0;
+}
+
+/* Alternating layout */
+.superlex-manufacturing-row.reverse-row
+.superlex-manufacturing-image {
+  order: 2;
+}
+
+.superlex-manufacturing-row.reverse-row
+.superlex-manufacturing-content {
+  order: 1;
+}
+
+/* Factory images */
+.superlex-manufacturing-image {
+  width: 100%;
+  height: 310px;
+  border: 5px solid var(--white-color, #fff);
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--dark-color, #191919);
+}
+
+.superlex-manufacturing-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.superlex-manufacturing-image:hover img {
+  transform: scale(1.05);
+}
+
+/* Content */
+.superlex-manufacturing-content {
+  width: 100%;
+}
+
+.superlex-manufacturing-title {
+  display: table;
+  margin: 0 0 25px;
+  padding: 10px 22px;
+  background: var(--white-color, #fff);
+  color: var(--secondary-color, #101010);
+  border-radius: 8px;
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 1.2;
+  text-transform: uppercase;
+  border-left: 5px solid var(--yellow, #ffe32b);
+}
+
+/* Bullet list */
+.superlex-manufacturing-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.superlex-manufacturing-list li {
+  position: relative;
+  padding-left: 22px;
+  margin-bottom: 17px;
+  color: var(--white-color, #fff);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.superlex-manufacturing-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--yellow, #ffe32b);
+}
+
+.superlex-manufacturing-list strong {
+  display: block;
+  color: var(--white-color, #fff);
+  font-size: 15px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.superlex-manufacturing-list span {
+  display: block;
+  color: var(--white-color, #fff);
+  font-size: 14px;
+  font-weight: 400;
+}
+
+/* Tablet */
+@media (max-width: 991px) {
+  .superlex-manufacturing-row {
+    gap: 25px;
+  }
+
+  .superlex-manufacturing-image {
+    height: 270px;
+  }
+
+  .superlex-manufacturing-title {
+    font-size: 25px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .superlex-manufacturing {
+    padding: 35px 0;
+  }
+
+  .superlex-manufacturing-row {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+
+  .superlex-manufacturing-row.reverse-row
+  .superlex-manufacturing-image,
+  .superlex-manufacturing-row.reverse-row
+  .superlex-manufacturing-content {
+    order: initial;
+  }
+
+  .superlex-manufacturing-image {
+    height: 240px;
+    border-width: 4px;
+    border-radius: 20px;
+  }
+
+  .superlex-manufacturing-title {
+    font-size: 23px;
+    padding: 9px 18px;
+    margin-bottom: 20px;
+  }
+
+  .superlex-manufacturing-list li {
+    font-size: 14px;
+    margin-bottom: 14px;
+  }
+}
