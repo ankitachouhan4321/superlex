@@ -173,7 +173,7 @@ const Footer = () => {
 
                         <div className="col-md-6 text-center text-md-start">
                             <p>
-                                © {new Date().getFullYear()} Superlux Auto Lights.
+                                © {new Date().getFullYear()} Superlex Auto Lights.
                                 All Rights Reserved.
                             </p>
                         </div>
