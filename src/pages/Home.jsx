@@ -1,7 +1,7 @@
 import React from 'react'
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay, Pagination } from "swiper/modules";
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -319,9 +319,9 @@ const Home = () => {
 
     return (
         <>
-        <div>
-               
-        </div>
+            <div>
+
+            </div>
 
 
             {/* hero-banner start */}
@@ -362,7 +362,7 @@ const Home = () => {
                                     <img
                                         src={image}
                                         className="d-block w-100 banner-img"
-                                        alt={`Superlux Auto Lights Banner ${index + 1}`}
+                                        alt={`Superlex Auto Lights Banner ${index + 1}`}
                                     />
                                 </div>
                             </div>
@@ -429,7 +429,7 @@ const Home = () => {
                                     <img
                                         src={image}
                                         className="d-block w-100 banner-img"
-                                        alt={`Superlux Auto Lights Banner ${index + 1}`}
+                                        alt={`Superlex Auto Lights Banner ${index + 1}`}
                                     />
                                 </div>
                             </div>
@@ -589,7 +589,7 @@ const Home = () => {
                         ))}
                     </div>
 
-                 
+
 
                 </div>
             </section>
@@ -734,124 +734,124 @@ const Home = () => {
                 <div className="container-fluid px-3 px-lg-5">
                     <div class="container">
 
-                    {/* SECTION HEADING */}
-                    <div className="row align-items-center mb-4">
-                        <div className="col-lg-8 col-md-8">
-                            <div className="product-section-heading">
-                                <span className="section-subtitle">
-                                    SUPERLUX AUTO LIGHTS
-                                </span>
+                        {/* SECTION HEADING */}
+                        <div className="row align-items-center mb-4">
+                            <div className="col-lg-8 col-md-8">
+                                <div className="product-section-heading">
+                                    <span className="section-subtitle">
+                                        Superlex AUTO LIGHTS
+                                    </span>
 
-                                <h2>Our Featured Products</h2>
+                                    <h2>Our Featured Products</h2>
 
-                                <p>
-                                    Explore our range of automotive lighting
-                                    products designed for modern vehicles.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div className="col-lg-4 col-md-4">
-                            <div className="product-slider-arrows">
-                                <button
-                                    className="product-prev"
-                                    aria-label="Previous product"
-                                >
-                                    <i className="fa-solid fa-arrow-left"></i>
-                                </button>
-
-                                <button
-                                    className="product-next"
-                                    aria-label="Next product"
-                                >
-                                    <i className="fa-solid fa-arrow-right"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* SWIPER SLIDER */}
-                    <Swiper
-                        modules={[Navigation, Autoplay, Pagination]}
-                        spaceBetween={24}
-                        slidesPerView={1}
-                        speed={800}
-                        loop={products.length > 4}
-                        autoplay={{
-                            delay: 3000,
-                            disableOnInteraction: false,
-                            pauseOnMouseEnter: true,
-                        }}
-                        navigation={{
-                            nextEl: ".product-next",
-                            prevEl: ".product-prev",
-                        }}
-
-                        breakpoints={{
-                            576: {
-                                slidesPerView: 2,
-                                spaceBetween: 15,
-                            },
-                            768: {
-                                slidesPerView: 2,
-                                spaceBetween: 20,
-                            },
-                            992: {
-                                slidesPerView: 4,
-                                spaceBetween: 24,
-                            },
-                            1200: {
-                                slidesPerView: 4,
-                                spaceBetween: 24,
-                            },
-                        }}
-                        className="product-swiper"
-                    >
-                        {products.map((product) => (
-                            <SwiperSlide key={product.id}>
-                                <div className="product-card">
-
-                                    {/* PRODUCT IMAGE */}
-                                    <div className="product-image">
-                                        <img
-                                            src={product.image}
-                                            alt={product.name}
-                                            loading="lazy"
-                                            className='img1'
-                                        />
-                                        <img
-                                            src={product.image2}
-                                            alt={product.name}
-                                            loading="lazy"
-                                            className='img2'
-                                        />
-
-                                    </div>
-
-                                    {/* PRODUCT CONTENT */}
-                                    <div className="product-card-content">
-                                        <h5>{product.part}</h5>
-
-                                        <h3>{product.name}</h3>
-
-                                        <a
-                                            href={`https://wa.me/919654475016?text=${encodeURIComponent(
-                                                `Hello Superlex, I want to enquire about ${product.name}. Please share the price and details.`
-                                            )}`}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="product-enquiry-btn"
-                                        >
-                                            Enquiry Now
-                                            <i className="fa-solid fa-arrow-right"></i>
-                                        </a>
-                                    </div>
-
+                                    <p>
+                                        Explore our range of automotive lighting
+                                        products designed for modern vehicles.
+                                    </p>
                                 </div>
-                            </SwiperSlide>
-                        ))}
-                    </Swiper>
-                </div>
+                            </div>
+
+                            <div className="col-lg-4 col-md-4">
+                                <div className="product-slider-arrows">
+                                    <button
+                                        className="product-prev"
+                                        aria-label="Previous product"
+                                    >
+                                        <i className="fa-solid fa-arrow-left"></i>
+                                    </button>
+
+                                    <button
+                                        className="product-next"
+                                        aria-label="Next product"
+                                    >
+                                        <i className="fa-solid fa-arrow-right"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* SWIPER SLIDER */}
+                        <Swiper
+                            modules={[Navigation, Autoplay, Pagination]}
+                            spaceBetween={24}
+                            slidesPerView={1}
+                            speed={800}
+                            loop={products.length > 4}
+                            autoplay={{
+                                delay: 3000,
+                                disableOnInteraction: false,
+                                pauseOnMouseEnter: true,
+                            }}
+                            navigation={{
+                                nextEl: ".product-next",
+                                prevEl: ".product-prev",
+                            }}
+
+                            breakpoints={{
+                                576: {
+                                    slidesPerView: 2,
+                                    spaceBetween: 15,
+                                },
+                                768: {
+                                    slidesPerView: 2,
+                                    spaceBetween: 20,
+                                },
+                                992: {
+                                    slidesPerView: 4,
+                                    spaceBetween: 24,
+                                },
+                                1200: {
+                                    slidesPerView: 4,
+                                    spaceBetween: 24,
+                                },
+                            }}
+                            className="product-swiper"
+                        >
+                            {products.map((product) => (
+                                <SwiperSlide key={product.id}>
+                                    <div className="product-card">
+
+                                        {/* PRODUCT IMAGE */}
+                                        <div className="product-image">
+                                            <img
+                                                src={product.image}
+                                                alt={product.name}
+                                                loading="lazy"
+                                                className='img1'
+                                            />
+                                            <img
+                                                src={product.image2}
+                                                alt={product.name}
+                                                loading="lazy"
+                                                className='img2'
+                                            />
+
+                                        </div>
+
+                                        {/* PRODUCT CONTENT */}
+                                        <div className="product-card-content">
+                                            <h5>{product.part}</h5>
+
+                                            <h3>{product.name}</h3>
+
+                                            <a
+                                                href={`https://wa.me/919654475016?text=${encodeURIComponent(
+                                                    `Hello Superlex, I want to enquire about ${product.name}. Please share the price and details.`
+                                                )}`}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="product-enquiry-btn"
+                                            >
+                                                Enquiry Now
+                                                <i className="fa-solid fa-arrow-right"></i>
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                </SwiperSlide>
+                            ))}
+                        </Swiper>
+                    </div>
                 </div>
             </section>
             {/* product-sec end */}
@@ -1079,9 +1079,9 @@ const Home = () => {
             {/* export end */}
 
 
-            <Testimonials/>
+            <Testimonials />
 
-            
+
 
         </>
     )

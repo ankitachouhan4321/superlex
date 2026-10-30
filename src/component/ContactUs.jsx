@@ -112,88 +112,88 @@ const ContactUs = () => {
 
     return (
         <>
-        <section className="superlex-contact-section">
-            <div className="container-lg">
+            <section className="superlex-contact-section">
+                <div className="container-lg">
 
-                {/* Contact Information Cards */}
-                <div className="row g-4 superlex-info-row">
+                    {/* Contact Information Cards */}
+                    <div className="row g-4 superlex-info-row">
 
-                    {/* Phone Card */}
-                    <div className="col-lg-4 col-sm-6">
-                        <div className="superlex-info-card">
-                            <div className="superlex-info-icon">
-                                <i className="fa-solid fa-phone"></i>
+                        {/* Phone Card */}
+                        <div className="col-lg-4 col-sm-6">
+                            <div className="superlex-info-card">
+                                <div className="superlex-info-icon">
+                                    <i className="fa-solid fa-phone"></i>
+                                </div>
+
+                                <h3>Phone Number</h3>
+
+                                {CONTACT.phones.length ? (
+                                    CONTACT.phones.map((phone) => (
+                                        <a
+                                            key={phone}
+                                            href={`tel:${phone.replace(/[^\d+]/g, "")}`}
+                                        >
+                                            {phone}
+                                        </a>
+                                    ))
+                                ) : (
+                                    <p>Contact number coming soon</p>
+                                )}
                             </div>
+                        </div>
 
-                            <h3>Phone Number</h3>
+                        {/* Email Card */}
+                        <div className="col-lg-4 col-sm-6">
+                            <div className="superlex-info-card">
+                                <div className="superlex-info-icon">
+                                    <i className="fa-solid fa-envelope"></i>
+                                </div>
 
-                            {CONTACT.phones.length ? (
-                                CONTACT.phones.map((phone) => (
-                                    <a
-                                        key={phone}
-                                        href={`tel:${phone.replace(/[^\d+]/g, "")}`}
-                                    >
-                                        {phone}
+                                <h3>Email Address</h3>
+
+                                {CONTACT.email ? (
+                                    <a href={`mailto:${CONTACT.email}`}>
+                                        {CONTACT.email}
                                     </a>
-                                ))
-                            ) : (
-                                <p>Contact number coming soon</p>
-                            )}
-                        </div>
-                    </div>
-
-                    {/* Email Card */}
-                    <div className="col-lg-4 col-sm-6">
-                        <div className="superlex-info-card">
-                            <div className="superlex-info-icon">
-                                <i className="fa-solid fa-envelope"></i>
+                                ) : (
+                                    <p>Email address coming soon</p>
+                                )}
                             </div>
-
-                            <h3>Email Address</h3>
-
-                            {CONTACT.email ? (
-                                <a href={`mailto:${CONTACT.email}`}>
-                                    {CONTACT.email}
-                                </a>
-                            ) : (
-                                <p>Email address coming soon</p>
-                            )}
                         </div>
-                    </div>
 
-                    {/* Address Card */}
-                    <div className="col-lg-4 col-sm-12">
-                        <div className="superlex-info-card">
-                            <div className="superlex-info-icon">
-                                <i className="fa-solid fa-location-dot"></i>
-                            </div>
+                        {/* Address Card */}
+                        <div className="col-lg-4 col-sm-12">
+                            <div className="superlex-info-card">
+                                <div className="superlex-info-icon">
+                                    <i className="fa-solid fa-location-dot"></i>
+                                </div>
 
-                            <h3>Office Address</h3>
+                                <h3>Office Address</h3>
 
                                 <p>Dharma Enterprises
-<br/>
-                                {CONTACT.address ||
-                                    "Official Superlex address coming soon"}
-                            </p>
+                                    <br />
+                                    {CONTACT.address ||
+                                        "Official Superlex address coming soon"}
+                                </p>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                {/* Contact Form Section */}
-                <div className="superlex-contact-wrapper">
-                    <div className="row g-4 align-items-stretch">
+                    {/* Contact Form Section */}
+                    <div className="superlex-contact-wrapper">
+                        <div className="row g-4 align-items-stretch">
 
-                        {/* Left Side Form */}
-                        <div className="col-lg-7">
-                            <div className="superlex-form-content">
+                            {/* Left Side Form */}
+                            <div className="col-lg-7">
+                                <div className="superlex-form-content">
 
-                                <div class="product-section-heading">
-                                    <span class="section-subtitle">  GET IN TOUCH</span>
-                                    <h2>Contact Us</h2>
-                                    <p className="pb-3">Looking for quality motorcycle indicators?
-                                        Contact Superlex for product enquiries,
-                                        bulk orders, export requirements and
-                                        distribution opportunities.</p></div>
+                                    <div class="product-section-heading">
+                                        <span class="section-subtitle">  GET IN TOUCH</span>
+                                        <h2>Contact Us</h2>
+                                        <p className="pb-3">Looking for quality motorcycle indicators?
+                                            Contact Superlex for product enquiries,
+                                            bulk orders, export requirements and
+                                            distribution opportunities.</p></div>
 
                                     <form
                                         action="https://formsubmit.co/superlexautolight@gmail.com"
@@ -211,145 +211,145 @@ const ContactUs = () => {
                                             value="table"
                                         />
 
-                                    {/* Honeypot Spam Protection */}
-                                    <input
-                                        type="text"
-                                        name="website"
-                                        value={formData.website}
-                                        onChange={handleChange}
-                                        tabIndex={-1}
-                                        autoComplete="off"
-                                        aria-hidden="true"
-                                        style={{ display: "none" }}
-                                    />
+                                        {/* Honeypot Spam Protection */}
+                                        <input
+                                            type="text"
+                                            name="website"
+                                            value={formData.website}
+                                            onChange={handleChange}
+                                            tabIndex={-1}
+                                            autoComplete="off"
+                                            aria-hidden="true"
+                                            style={{ display: "none" }}
+                                        />
 
-                                    <div className="row g-3">
+                                        <div className="row g-3">
 
-                                        <div className="col-md-6">
-                                            <input
-                                                type="text"
-                                                name="name"
-                                                className="superlex-form-control"
-                                                placeholder="Your Name *"
-                                                aria-label="Your Name"
-                                                value={formData.name}
-                                                onChange={handleChange}
-                                                autoComplete="name"
-                                                maxLength={100}
-                                                required
-                                            />
-                                        </div>
-
-                                        <div className="col-md-6">
-                                            <input
-                                                type="tel"
-                                                name="phone"
-                                                className="superlex-form-control"
-                                                placeholder="Phone Number *"
-                                                aria-label="Phone Number"
-                                                value={formData.phone}
-                                                onChange={handleChange}
-                                                autoComplete="tel"
-                                                pattern="[0-9+\s()\-]{10,20}"
-                                                required
-                                            />
-                                        </div>
-
-                                        <div className="col-md-6">
-                                            <input
-                                                type="email"
-                                                name="email"
-                                                className="superlex-form-control"
-                                                placeholder="Email Address *"
-                                                aria-label="Email Address"
-                                                value={formData.email}
-                                                onChange={handleChange}
-                                                autoComplete="email"
-                                                maxLength={150}
-                                                required
-                                            />
-                                        </div>
-
-                                        <div className="col-md-6">
-                                            <select
-                                                name="enquiryType"
-                                                className="superlex-form-control"
-                                                aria-label="Enquiry Type"
-                                                value={formData.enquiryType}
-                                                onChange={handleChange}
-                                                required
-                                            >
-                                                <option value="">
-                                                    Select Enquiry Type *
-                                                </option>
-
-                                                {enquiryOptions.map((option) => (
-                                                    <option
-                                                        key={option}
-                                                        value={option}
-                                                    >
-                                                        {option}
-                                                    </option>
-                                                ))}
-                                            </select>
-                                        </div>
-
-                                        <div className="col-12">
-                                            <textarea
-                                                name="message"
-                                                className="superlex-form-control"
-                                                rows="5"
-                                                placeholder="Tell us about your requirements *"
-                                                aria-label="Your Message"
-                                                value={formData.message}
-                                                onChange={handleChange}
-                                                maxLength={3000}
-                                                required
-                                            ></textarea>
-                                        </div>
-
-                                        {status.message && (
-                                            <div className="col-12">
-                                                <div
-                                                    className={`alert alert-${status.type}`}
-                                                    role="status"
-                                                    aria-live="polite"
-                                                >
-                                                    {status.message}
-                                                </div>
+                                            <div className="col-md-6">
+                                                <input
+                                                    type="text"
+                                                    name="name"
+                                                    className="superlex-form-control"
+                                                    placeholder="Your Name *"
+                                                    aria-label="Your Name"
+                                                    value={formData.name}
+                                                    onChange={handleChange}
+                                                    autoComplete="name"
+                                                    maxLength={100}
+                                                    required
+                                                />
                                             </div>
-                                        )}
 
-                                        <div className="col-12">
+                                            <div className="col-md-6">
+                                                <input
+                                                    type="tel"
+                                                    name="phone"
+                                                    className="superlex-form-control"
+                                                    placeholder="Phone Number *"
+                                                    aria-label="Phone Number"
+                                                    value={formData.phone}
+                                                    onChange={handleChange}
+                                                    autoComplete="tel"
+                                                    pattern="[0-9+\s()\-]{10,20}"
+                                                    required
+                                                />
+                                            </div>
+
+                                            <div className="col-md-6">
+                                                <input
+                                                    type="email"
+                                                    name="email"
+                                                    className="superlex-form-control"
+                                                    placeholder="Email Address *"
+                                                    aria-label="Email Address"
+                                                    value={formData.email}
+                                                    onChange={handleChange}
+                                                    autoComplete="email"
+                                                    maxLength={150}
+                                                    required
+                                                />
+                                            </div>
+
+                                            <div className="col-md-6">
+                                                <select
+                                                    name="enquiryType"
+                                                    className="superlex-form-control"
+                                                    aria-label="Enquiry Type"
+                                                    value={formData.enquiryType}
+                                                    onChange={handleChange}
+                                                    required
+                                                >
+                                                    <option value="">
+                                                        Select Enquiry Type *
+                                                    </option>
+
+                                                    {enquiryOptions.map((option) => (
+                                                        <option
+                                                            key={option}
+                                                            value={option}
+                                                        >
+                                                            {option}
+                                                        </option>
+                                                    ))}
+                                                </select>
+                                            </div>
+
+                                            <div className="col-12">
+                                                <textarea
+                                                    name="message"
+                                                    className="superlex-form-control"
+                                                    rows="5"
+                                                    placeholder="Tell us about your requirements *"
+                                                    aria-label="Your Message"
+                                                    value={formData.message}
+                                                    onChange={handleChange}
+                                                    maxLength={3000}
+                                                    required
+                                                ></textarea>
+                                            </div>
+
+                                            {status.message && (
+                                                <div className="col-12">
+                                                    <div
+                                                        className={`alert alert-${status.type}`}
+                                                        role="status"
+                                                        aria-live="polite"
+                                                    >
+                                                        {status.message}
+                                                    </div>
+                                                </div>
+                                            )}
+
+                                            <div className="col-12">
                                                 <button type="submit" className="contact-btn">
                                                     Send Enquiry
                                                     <i className="fa-solid fa-arrow-right"></i>
                                                 </button>
+                                            </div>
+
                                         </div>
-
-                                    </div>
-                                </form>
+                                    </form>
+                                </div>
                             </div>
-                        </div>
 
-                        {/* Right Side Product Image */}
-                        <div className="col-lg-5">
-                            <div className="superlex-contact-image">
-                                <img
-                                    src={CONTACT.image}
-                                    alt="Superlex motorcycle indicator lights"
-                                    loading="lazy"
-                                />
+                            {/* Right Side Product Image */}
+                            <div className="col-lg-5">
+                                <div className="superlex-contact-image">
+                                    <img
+                                        src={CONTACT.image}
+                                        alt="Superlex motorcycle indicator lights"
+                                        loading="lazy"
+                                    />
 
+                                </div>
                             </div>
-                        </div>
 
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
             <iframe
-                title="Superlux Auto Lights Location"
+                title="Superlex Auto Lights Location"
                 src="https://maps.google.com/maps?q=New%20Delhi%20110086%20India&t=&z=12&ie=UTF8&iwloc=&output=embed"
                 width="100%"
                 height="350"

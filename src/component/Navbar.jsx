@@ -51,7 +51,7 @@ const Navbar = () => {
                                 <i className="fa-brands fa-youtube"></i>
                             </a>
 
-                          
+
                         </div>
 
                         <a className="hotline" href="tel:+919654475016">
@@ -75,7 +75,7 @@ const Navbar = () => {
                     <a href="/" className="brand-logo" onClick={closeMenu}>
                         <img
                             src="/img/logo.png"
-                            alt="Superlux Auto Lights"
+                            alt="Superlex Auto Lights"
                             className="img-fluid"
                         />
                     </a>
